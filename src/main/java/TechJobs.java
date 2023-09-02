@@ -127,11 +127,11 @@ public class TechJobs {
             System.out.print("No Results");
         }else {
             for (HashMap<String, String> job : someJobs){
-                System.out.println("\n******");
+                System.out.print("******\n");
                 for (Map.Entry<String, String> entry : job.entrySet()){
                     System.out.println(entry.getKey() + ": " + entry.getValue());
                 }
-                System.out.println("******");
+                System.out.print("******\n");
             }
         }
     }
