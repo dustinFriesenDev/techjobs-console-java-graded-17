@@ -1,8 +1,5 @@
 import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by LaunchCode
@@ -44,13 +41,19 @@ public class TechJobs {
                 } else {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
-
+                    ArrayList<String> alphabetizedItems = new ArrayList<>();
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
 
                     // Print list of skills, employers, etc
                     for (String item : results) {
-                        System.out.println(item);
+//                        System.out.println(item);
+                        alphabetizedItems.add(item);
                     }
+                    Collections.sort(alphabetizedItems);
+                    for (String ordered : alphabetizedItems){
+                        System.out.println(ordered);
+                    }
+
                 }
 
             } else { // choice is "search"
